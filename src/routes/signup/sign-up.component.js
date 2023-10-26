@@ -43,8 +43,8 @@ const LoginForm = () => {
     }
     
     return(
-        <div>
-            <h1>SIGN UP</h1>
+        <div className="p-6 flex items-center flex-col w-full">
+            <h1 className="text-blue-700 text-lg font-bold mb-4">SIGN UP FORM</h1>
 
             <form onSubmit={handleSubmit}>
                 <FormInput
@@ -61,10 +61,10 @@ const LoginForm = () => {
           
                 <FormInput label="Password" type="password" required onChange={handleChange} name="password" value={password}/>
 
-                <button type="submit">Submit</button>
+                <button className="bg-blue-500 mr-2 px-4 py-2 rounded focus:outline-none text-white hover:bg-blue-700" type="submit">Submit</button>
 
-                <p>Already have an account
-                <Link to='/sign-in'> SIGN IN </Link>here</p>
+                <p className="inline text-gray-700">Click here to 
+                <Link className="font-bold text-blue-700 text-sm" to='/sign-in'> SIGN IN</Link></p>
             </form>
         </div>
     )
