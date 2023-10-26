@@ -1,9 +1,9 @@
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utils/firebase/firebase.component"
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import FormInput from "../../component/form-input/form-input.component";
 
-import FormInput from "../form-input/form-input.component";
-
-const defaultForm ={
+const defaultForm = {
     displayName:"",
     phoneNumber:"",
     email:"",
@@ -45,6 +45,7 @@ const LoginForm = () => {
     return(
         <div>
             <h1>SIGN UP</h1>
+
             <form onSubmit={handleSubmit}>
                 <FormInput
                     label="Name"
@@ -61,6 +62,9 @@ const LoginForm = () => {
                 <FormInput label="Password" type="password" required onChange={handleChange} name="password" value={password}/>
 
                 <button type="submit">Submit</button>
+
+                <p>Already have an account
+                <Link to='/sign-in'> SIGN IN </Link>here</p>
             </form>
         </div>
     )

@@ -1,10 +1,14 @@
-import LoginForm from "./component/signup/sign-up.component";
+import { Routes, Route } from "react-router-dom";
+import LoginForm from "./routes/signup/sign-up.component";
+import SignIn from "./component/sign-in/sign-in.component";
+import './App.css';
 
 const App = () =>{
     return(
-        <div>
-            <LoginForm />
-        </div>
+        <Routes>
+            <Route path="/" element={<LoginForm />}/>
+            <Route path="sign-in" element={<SignIn />}/>
+        </Routes>
     )
 }
 

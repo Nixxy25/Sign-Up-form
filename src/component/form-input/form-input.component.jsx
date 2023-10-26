@@ -2,7 +2,7 @@
 const FormInput = ({label, ...otherProps }) => {
     return(
         <div>
-            <label>{label}</label>
+            <label className="block text-gray-700 text-sm font-bold mb-2">{label}</label>
             <input 
                 {...otherProps}
             />
