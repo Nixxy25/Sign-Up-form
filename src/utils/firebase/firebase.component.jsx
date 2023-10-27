@@ -26,7 +26,7 @@ const firebaseConfig = {
   };
 
   // Initialize Firebase
- initializeApp(firebaseConfig);
+  const firebaseApp = initializeApp(firebaseConfig);
 
   const googleProvider = new GoogleAuthProvider ();
 
@@ -38,7 +38,7 @@ const firebaseConfig = {
 
   export const signInWithGooglePopup = () => signInWithPopup(auth, googleProvider);
 
-  export const db = getFirestore();
+  export const db = getFirestore(firebaseApp);
 
   export const createUserDocumentFromAuth = async (
     userAuth, 
